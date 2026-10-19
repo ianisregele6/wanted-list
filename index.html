@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Wanted List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>The Wanted List</h1>
+      <span class="rule" aria-hidden="true"></span>
+      <p class="sub">Things worth waiting for.</p>
+      <div class="progress" role="progressbar" aria-label="Items bought" aria-valuemin="0" aria-valuemax="100">
+        <div id="bar" class="bar"></div>
+      </div>
+      <p id="counter" class="counter"></p>
+    </div>
+  </header>
+
+  <main>
+    <form id="add-form" class="panel add-form">
+      <div class="field">
+        <label for="name">Product</label>
+        <input type="text" id="name" placeholder="e.g. Mechanical keyboard" required>
+      </div>
+      <div class="field">
+        <label for="link">Link</label>
+        <input type="text" id="link" placeholder="Paste the product link (optional)">
+      </div>
+      <button type="submit" class="add-btn">Add to list</button>
+    </form>
+
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="todo">To buy</button>
+      <button class="filter" data-filter="bought">Bought</button>
+    </div>
+
+    <ul id="list" class="list"></ul>
+    <p id="empty" class="empty"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
